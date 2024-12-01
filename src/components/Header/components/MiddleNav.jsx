@@ -3,7 +3,6 @@ import { Avatar, Badge, Button, Divider, Popover, message } from "antd";
 import {
   CartIcon,
   HeartIcon,
-  SearchIcon,
   UserIcon,
   XCircleIcon,
 } from "../../../utils/icons";
@@ -252,9 +251,7 @@ const MiddleNav = () => {
         <Link className="px-2" to="/wishlist">
           Wish List
         </Link>
-        <Link className="px-2" to="/compare">
-          Compare
-        </Link>
+        
         <Link className="px-2" to="/profile">
           Profile
         </Link>
@@ -274,14 +271,7 @@ const MiddleNav = () => {
         <Link to="/">
           <img src={info?.logo} alt="" className="w-[127px] h-[48px] pb-2" />
         </Link>
-        <div className="flex items-center justify-between px-3 py-2 bg-white rounded-md">
-          <input
-            type="text"
-            placeholder="Search for something"
-            className="rounded-md w-[578px] text-sm outline-none text-[#77878F] "
-          />
-          <SearchIcon />
-        </div>
+
         <div className="flex items-center gap-[16px]">
           <Popover
             style={{ color: "white" }}

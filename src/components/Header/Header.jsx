@@ -1,12 +1,9 @@
-import { MiddleNav, TopHeader, Widget } from "./components";
+import { MiddleNav } from "./components";
 
 const Header = () => {
   return (
     <>
-      <Widget></Widget>
-      <TopHeader />
       <MiddleNav />
-      {/* <BottomNav /> */}
     </>
   );
 };
