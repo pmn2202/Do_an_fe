@@ -5,7 +5,6 @@ import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const AdminPage = () => {
-  const token = localStorage.getItem("token");
   let location = useLocation();
   const pathname = location.pathname;
   const a = pathname.split("/");
@@ -15,10 +14,6 @@ const AdminPage = () => {
   }
 
   const navbarAdmin = [
-    {
-      path: "",
-      label: "Dashboard",
-    },
     {
       path: "categories",
       label: "Categories",
@@ -34,10 +29,6 @@ const AdminPage = () => {
     {
       path: "order",
       label: "Orders",
-    },
-    {
-      path: `https://do-an-web.onrender.com/api/v1/admin/chat?token=${token}`,
-      label: "Chat",
     },
     {
       path: "role",

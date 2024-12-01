@@ -6,7 +6,6 @@ import ProductDetail from "./src/components/product/ProductDetail";
 import OrderHistory from "./src/components/UserAccount/OrderHistory";
 import ShoppingCart from "./src/components/UserAccount/ShoppingCart";
 import WishList from "./src/components/UserAccount/WishList";
-import Compare from "./src/components/UserAccount/Compare";
 import Profile from "./src/components/UserAccount/Profile";
 import Login from "./src/pages/login/Login";
 import Register from "./src/pages/register/Register";
@@ -14,10 +13,8 @@ import ForgotPassword from "./src/pages/forgotPassword/ForgotPassword";
 import ResetPassword from "./src/pages/forgotPassword/ResetPassword";
 import OrderDetail from "./src/components/UserAccount/OrderDetail";
 import AdminPage from "./src/pages/admin/AdminPage";
-import Dashboard from "./src/pages/admin/Dashboard";
 import CategoriesPage from "./src/pages/admin/categories/CategoriesPage";
 import UserPage from "./src/pages/admin/user/UserPage";
-import ChatAdmin from "./src/pages/admin/chat/ChatAdmin";
 import ProductPage from "./src/pages/admin/products/ProductPage";
 import VerifyEmail from "./src/pages/forgotPassword/VerifyEmail";
 import CheckOut from "./src/components/UserAccount/CheckOut";
@@ -83,14 +80,7 @@ export default function useRouteElement() {
             </ProtectedRoute>
           ),
         },
-        {
-          path: "compare",
-          element: (
-            <ProtectedRoute>
-              <Compare />
-            </ProtectedRoute>
-          ),
-        },
+        
         {
           path: "profile",
           element: (
@@ -148,11 +138,7 @@ export default function useRouteElement() {
       children: [
         {
           index: true,
-          element: (
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
-          ),
+          element: <ProtectedRoute>{/* <Dashboard /> */}</ProtectedRoute>,
         },
         {
           path: "user",
@@ -178,14 +164,7 @@ export default function useRouteElement() {
             </ProtectedRoute>
           ),
         },
-        {
-          path: "chat",
-          element: (
-            <ProtectedRoute>
-              <ChatAdmin />
-            </ProtectedRoute>
-          ),
-        },
+
         {
           path: "order",
           element: (
